@@ -18,7 +18,7 @@ import car.service.CarService;
 public class CarController {
 	@Autowired
 	private CarService carService;
-
+//2
 	@PostMapping(path = "/add", consumes = "application/json", produces = "application/json")
 	public void addUser(@RequestBody CarRecord carRecord) {
 		carService.addUser(carRecord);
@@ -28,7 +28,7 @@ public class CarController {
 	public List<CarRecord> getAllUser() {
 		return carService.getAllUsers();
 	}
-
+//1
 	@GetMapping("/car/{id}")
 	private Optional<CarRecord> getBooks(@PathVariable("id") int id) {
 		return carService.getByid(id);
